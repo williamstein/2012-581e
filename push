@@ -1,0 +1,1 @@
+rsync -axvH --delete ./ sage.math.washington.edu:www/edu/2012/ant/
