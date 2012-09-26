@@ -47,14 +47,29 @@ is a field.  As I explained in class, the only thing that is not obvious is that
 every nonzero element has an inverse, so that is the only thing you need to prove 
 in giving your solution to this problem.   \hint{Consider
 a nonzero $\beta = \sum_{i=0}^{\deg(f)-1} a_i \alpha^i$ and let $g(x) = \sum a_i x^i$,
-then use the extendec Euclidean algorithm to show there exists $h(x),m(x)\in \Q[x]$ 
+then use the extended Euclidean algorithm to show there exists $h(x),m(x)\in \Q[x]$ 
 with $h(x)f(x)+ m(x)g(x) = 1$.}
 
-\item\label{last} Prove that the following additive abelian groups are not finitely generated:
-$$\Q,\, \Q/\Z,\, \R,\, (\Z/7\Z)^{\infty},$$ 
-(this last group is a countably-infinite dimensional
-vector space over the field of cardinality $7$).  \hint{If a nonzero group is {\em divisible} then it 
-can't be finitely generated.}
+\item Prove that the following additive abelian groups are not finitely generated:
+$$\Q,\, \Q/\Z,\, \R,\, (\Z/7\Z)^{\infty},$$ (this last group is a
+  countably-infinite dimensional vector space over the field of
+  cardinality $7$).  \hint{One trick -- if a nonzero group is {\em
+      divisible}, then it can't be finitely generated.}
+
+\item\label{last} Let $A$ be the matrix 
+$$A=\left(\begin{array}{rrr}
+0 & 7 & 1 \\
+0 & -1 & 1 \\
+-12 & 0 & 4
+\end{array}\right).$$
+Compute the Smith normal form of $A$ and the cokernel of the map $\Z^3\to \Z^3$ defined by
+$v\mapsto Av$.  Do the same for the matrix 
+$$B=\left(\begin{array}{rr}
+0 & 6 \\
+-1 & 7 \\
+-1 & -3
+\end{array}\right)$$
+
 
 \end{enumerate}
 
