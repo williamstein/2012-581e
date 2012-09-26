@@ -1,0 +1,61 @@
+\documentclass{article}
+%\voffset=-.12\textheight
+%\textheight=1.24\textheight
+\include{macros}
+\usepackage{url}
+\usepackage{color}
+\definecolor{dblackcolor}{rgb}{0.0,0.0,0.0}
+\definecolor{dbluecolor}{rgb}{.01,.02,0.7}
+\definecolor{dredcolor}{rgb}{0.6,0,0}
+\definecolor{dgraycolor}{rgb}{0.30,0.3,0.30}
+\usepackage{listings} 
+\lstdefinelanguage{Sage}[]{Python}
+{morekeywords={True,False,sage,singular},
+sensitive=true}
+\lstset{frame=none,
+          showtabs=False,
+          showspaces=False,
+          showstringspaces=False,
+          commentstyle={\ttfamily\color{dredcolor}},
+          keywordstyle={\ttfamily\color{dbluecolor}\bfseries},
+          stringstyle ={\ttfamily\color{dgraycolor}\bfseries},
+          language = Sage,
+	  basicstyle={\scriptsize \ttfamily},
+	  aboveskip=.3em,
+	  belowskip=.1em
+          }
+
+\title{\dred{Math 581e, Fall 2012, Homework 1}}
+\author{William Stein ({\tt wstein@uw.edu})}
+\date{Due: Friday, October 5, 2012}
+
+\begin{document}
+
+\maketitle
+
+{\color{dbluecolor}There are \ref{last} problems. Turn your solutions in Friday, October
+5, 2012 in class.  You may work with other people and can find the
+\LaTeX{} of this file at \url{http://wstein.org/edu/2011/581g/hw/}.
+Reminder: I have office hours 1:00pm-2:30pm on Wednesdays in Padelford
+C423.}
+
+\begin{enumerate}
+
+\item Let $f(x) \in \Q[x]$ be an irreducible polynomial, and let $\alpha$ be a root of $f$.
+Prove that the set of polynomial expressions in $\alpha$ of degree at most $\deg(f)-1$ 
+is a field.  As I explained in class, the only thing that is not obvious is that
+every nonzero element has an inverse, so that is the only thing you need to prove 
+in giving your solution to this problem.   \hint{Consider
+a nonzero $\beta = \sum_{i=0}^{\deg(f)-1} a_i \alpha^i$ and let $g(x) = \sum a_i x^i$,
+then use the extendec Euclidean algorithm to show there exists $h(x),m(x)\in \Q[x]$ 
+with $h(x)f(x)+ m(x)g(x) = 1$.}
+
+\item\label{last} Prove that the following additive abelian groups are not finitely generated:
+$$\Q,\, \Q/\Z,\, \R,\, (\Z/7\Z)^{\infty},$$ 
+(this last group is a countably-infinite dimensional
+vector space over the field of cardinality $7$).  \hint{If a nonzero group is {\em divisible} then it 
+can't be finitely generated.}
+
+\end{enumerate}
+
+\end{document}
