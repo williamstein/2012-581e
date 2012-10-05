@@ -1,0 +1,72 @@
+\documentclass{article}
+%\voffset=-.12\textheight
+%\textheight=1.24\textheight
+\include{macros}
+\usepackage{url}
+\usepackage{color}
+\definecolor{dblackcolor}{rgb}{0.0,0.0,0.0}
+\definecolor{dbluecolor}{rgb}{.01,.02,0.7}
+\definecolor{dredcolor}{rgb}{0.6,0,0}
+\definecolor{dgraycolor}{rgb}{0.30,0.3,0.30}
+\usepackage{listings} 
+\usepackage{hyperref} 
+\lstdefinelanguage{Sage}[]{Python}
+{morekeywords={True,False,sage,singular},
+sensitive=true}
+\lstset{frame=none,
+          showtabs=False,
+          showspaces=False,
+          showstringspaces=False,
+          commentstyle={\ttfamily\color{dredcolor}},
+          keywordstyle={\ttfamily\color{dbluecolor}\bfseries},
+          stringstyle ={\ttfamily\color{dgraycolor}\bfseries},
+          language = Sage,
+	  basicstyle={\scriptsize \ttfamily},
+	  aboveskip=.3em,
+	  belowskip=.1em
+          }
+
+\title{\dred{Math 581e, Fall 2012, Homework 2}}
+\author{William Stein ({\tt wstein@uw.edu})}
+\date{Due: Friday, October 12, 2012}
+
+\begin{document}
+
+\maketitle
+
+{\color{dbluecolor}There are \ref{last} problems. Turn your solutions in Friday, October
+5, 2012 in class.  You may work with other people and can find the
+\LaTeX{} of this file at \url{http://wstein.org/edu/2011/581g/hw/}.
+Reminder: I normally have office hours 1:00--2:30 on Wednesdays in Padelford
+C423 (except my Oct 10 office hours will instead be on Oct 8!).}
+
+\begin{enumerate}
+
+\item  Let $k$ be any field.  Prove that the polynomial ring $k[t]$ is noetherian.  \hint{This problem is very easy
+if you have been paying attention.}
+\item Let $k$ be a field.  Let $L$ be a finite degree field extension
+  of the field $k(t)$, i.e., $L$ is a function field.  An element
+  $\alpha \in F$ is an algebraic integer if there is some nonzero monic
+  polynomial $f(x) \in k(t)[x]$ with coefficients in $k[t]$ such that
+  $f(\alpha)=0$.
+\begin{enumerate}
+ \item  Prove that $1/t$ is not an algebraic integer.
+ \item What is the minimial polynomial of $\sqrt{t} + \sqrt{1+t}$?  (You may assume $\Char(k)\neq 2$ if you want.)
+ \item Prove that the set of algebraic integers in $L$ is a ring. 
+\end{enumerate}
+\item Let $\alpha = \sqrt{2} + \sqrt[3]{3}$.     (Use any method to answer this question; even just asking a computer.)
+\begin{enumerate}
+\item What is the matrix of multiplication by $\alpha$ on the field $\Q(\sqrt{2}, \sqrt[3]{3})$ 
+with respect to some choice of basis (give the basis you use)?
+\item What is the trace of $\alpha$? the norm of $\alpha$?
+\item What is the minimial polynomial of $\alpha$?  
+\end{enumerate}
+
+\item\label{last} Let $K$ be a number field and $\alpha \in K$.  Prove
+  that the matrix (with respect to some basis) of multiplication by
+  $\alpha$ is diagonalizable (over $\C$).
+
+
+\end{enumerate}
+
+\end{document}
