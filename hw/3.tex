@@ -1,0 +1,53 @@
+\documentclass{article}
+%\voffset=-.12\textheight
+%\textheight=1.24\textheight
+\include{macros}
+\usepackage{url}
+\usepackage{color}
+\definecolor{dblackcolor}{rgb}{0.0,0.0,0.0}
+\definecolor{dbluecolor}{rgb}{.01,.02,0.7}
+\definecolor{dredcolor}{rgb}{0.6,0,0}
+\definecolor{dgraycolor}{rgb}{0.30,0.3,0.30}
+\usepackage{listings} 
+\usepackage{hyperref} 
+\lstdefinelanguage{Sage}[]{Python}
+{morekeywords={True,False,sage,singular},
+sensitive=true}
+\lstset{frame=none,
+          showtabs=False,
+          showspaces=False,
+          showstringspaces=False,
+          commentstyle={\ttfamily\color{dredcolor}},
+          keywordstyle={\ttfamily\color{dbluecolor}\bfseries},
+          stringstyle ={\ttfamily\color{dgraycolor}\bfseries},
+          language = Sage,
+	  basicstyle={\scriptsize \ttfamily},
+	  aboveskip=.3em,
+	  belowskip=.1em
+          }
+
+\title{\dred{Math 581e, Fall 2012, Homework 3}}
+\author{William Stein ({\tt wstein@uw.edu})}
+\date{Due: Friday, October 19, 2012}
+
+\begin{document}
+
+\maketitle
+
+{\color{dbluecolor}There are \ref{last} problems. Turn your solutions in Friday, October
+5, 2012 in class.  You may work with other people and can find the
+\LaTeX{} of this file at \url{http://wstein.org/edu/2012/ant/hw/}.
+Reminder: I normally have office hours 12:30--2:00 on Wednesdays in Padelford
+C423.}
+
+\begin{enumerate}
+
+\item Let $K$ be a function field.  Prove that the ring of integers
+  $\O_K$ of $K$ is a Dedekind domain.
+
+\item\label{last} Which of the properties of a Dedekind domain does
+  the ring $\Zbar$ of all algebraic integers satisfy?
+
+\end{enumerate}
+
+\end{document}
