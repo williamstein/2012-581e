@@ -34,19 +34,38 @@ sensitive=true}
 
 \maketitle
 
-{\color{dbluecolor}There are \ref{last} problems. Turn your solutions in Friday, October
-5, 2012 in class.  You may work with other people and can find the
-\LaTeX{} of this file at \url{http://wstein.org/edu/2012/ant/hw/}.
-Reminder: I normally have office hours 12:30--2:00 on Wednesdays in Padelford
-C423.}
+{\color{dbluecolor}There are \ref{last} problems. Turn your solutions
+  in Friday, October 19, 2012 in class.  You may work with other
+  people and can find the \LaTeX{} of this file at
+  \url{http://wstein.org/edu/2012/ant/hw/}.  If you use Sage to solve
+  a problem, include your code in your solution. I have office hours
+  12:30--2:00 on Wednesdays in Padelford C423.  }
 
 \begin{enumerate}
 
-\item Let $K$ be a function field.  Prove that the ring of integers
-  $\O_K$ of $K$ is a Dedekind domain.
 
-\item\label{last} Which of the properties of a Dedekind domain does
-  the ring $\Zbar$ of all algebraic integers satisfy?
+\item Consider the ring $R=\Z[\sqrt{-5}]$.
+\begin{enumerate}
+\item Prove that $R$ is a Dedekind domain.
+\item Prove that the number $6$ factors
+  in two completely different ways as a product of irreducible
+  elements.  \hint{{\em Irreducible} means ``not a product of two
+  non-units''.}
+\item Explicitly factor $6R$ as a product of prime ideals. \hint{You can use Sage for this.}
+\end{enumerate}
+
+\item Let $\Zbar$ be the ring of all algebraic integers in
+  a fixed choice of $\Qbar$.  Then $\Zbar$ is {\em not} a Dedekind
+  domain.  Which of the three properties of a Dedekind domain does the
+  ring $\Zbar$ satisfy (give proof)?  \hint{The properties are: (1) every nonzero prime is maximal,
+  (2) noetherian, (3) integrally closed in its field of fractions.}
+
+\item Use Sage to find a basis for the ring of integers of the number
+  field obtained by adjoining one root of the polynomial $x^3 + x^2 -
+  2x + 8$ to $\Q$.
+
+\item\label{last} Let $K$ be any function field.  Prove that the ring
+  of integers $\cO_K$ of $K$ is a Dedekind domain.
 
 \end{enumerate}
 
