@@ -1,0 +1,75 @@
+\documentclass{article}
+%\voffset=-.12\textheight
+%\textheight=1.24\textheight
+\include{macros}
+\usepackage{url}
+\usepackage{color}
+\definecolor{dblackcolor}{rgb}{0.0,0.0,0.0}
+\definecolor{dbluecolor}{rgb}{.01,.02,0.7}
+\definecolor{dredcolor}{rgb}{0.6,0,0}
+\definecolor{dgraycolor}{rgb}{0.30,0.3,0.30}
+\definecolor{dgreen}{rgb}{0,0.3,0}
+\usepackage{listings} 
+\usepackage{hyperref} 
+\lstdefinelanguage{Sage}[]{Python}
+{morekeywords={True,False,sage,singular},
+sensitive=true}
+\lstset{frame=none,
+          showtabs=False,
+          showspaces=False,
+          showstringspaces=False,
+          commentstyle={\ttfamily\color{dredcolor}},
+          keywordstyle={\ttfamily\color{dbluecolor}\bfseries},
+          stringstyle ={\ttfamily\color{dgraycolor}\bfseries},
+          language = Sage,
+	  basicstyle={\scriptsize \ttfamily},
+	  aboveskip=.3em,
+	  belowskip=.1em
+          }
+
+\title{\dred{Math 581e, Fall 2012, Homework 4}}
+\author{William Stein ({\tt wstein@uw.edu})}
+\date{Due: Friday, October 26, 2012}
+
+\begin{document}
+
+\maketitle
+
+{\color{dbluecolor}There are \ref{last} problems. Turn your solutions
+  in Friday, October 26, 2012 in class.  You may work with other
+  people and can find the \LaTeX{} of this file at
+  \url{http://wstein.org/edu/2012/ant/hw/}.  If you use Sage to solve
+  a problem, include your code in your solution. I have office hours
+  12:30--2:00 on Wednesdays in Padelford C423.  }
+
+\begin{enumerate}
+
+\item Let $I$ be a nonzero integral ideal in the ring of integers
+  $\cO_K$ of a number field $K$.  {\color{dgreen} Prove that $I^{-1}=\{\alpha\in K:
+  \alpha I \subset I\}$. } \hint{In class, we proved exactly this
+    statement in the case when $I$ is a prime ideal.}
+
+\item {\color{dgreen} Give the most elementary proof you can that the abelian group of
+  fractional ideals in the ring of integers of a number field is
+  torsion free.} \hint{Obviously, this follows from the theorem that
+    every fractional ideal can be written uniquely as a product of
+    prime ideals.  However, that theorem took a lot of work to prove.
+    Find an argument that uses less total ``proof energy''.}
+
+\item Explicitly factor the fractional ideal $(2/3)\cO_K$ for $K$
+each of the following fields: $K=\Q, \Q(\sqrt{5}), \Q(\sqrt{2}), \Q(\sqrt[3]{2}), \Q(\sqrt{2},\sqrt{3})$.
+\hint{You can use Sage if you want.}
+
+\item\label{last}
+{\color{dgreen} Come up with an idea for what you might do your final project on.}
+(You can change based on my feedback, etc.)
+\begin{enumerate}
+\item Title of your final project:
+\item Abstract of your final project (one paragraph):
+\item Other people you might collaborate with on your final project (not required).
+\item Estimated amount of time you intend to spend on your final project.
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
