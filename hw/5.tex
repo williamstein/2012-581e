@@ -1,0 +1,54 @@
+\documentclass{article}
+%\voffset=-.12\textheight
+%\textheight=1.24\textheight
+\include{macros}
+\usepackage{url}
+\usepackage{color}
+\definecolor{dblackcolor}{rgb}{0.0,0.0,0.0}
+\definecolor{dbluecolor}{rgb}{.01,.02,0.7}
+\definecolor{dredcolor}{rgb}{0.6,0,0}
+\definecolor{dgraycolor}{rgb}{0.30,0.3,0.30}
+\definecolor{dgreen}{rgb}{0,0.3,0}
+\usepackage{listings} 
+\usepackage{hyperref} 
+\lstdefinelanguage{Sage}[]{Python}
+{morekeywords={True,False,sage,singular},
+sensitive=true}
+\lstset{frame=none,
+          showtabs=False,
+          showspaces=False,
+          showstringspaces=False,
+          commentstyle={\ttfamily\color{dredcolor}},
+          keywordstyle={\ttfamily\color{dbluecolor}\bfseries},
+          stringstyle ={\ttfamily\color{dgraycolor}\bfseries},
+          language = Sage,
+	  basicstyle={\scriptsize \ttfamily},
+	  aboveskip=.3em,
+	  belowskip=.1em
+          }
+
+\title{\dred{Math 581e, Fall 2012, Homework 5}}
+\author{William Stein ({\tt wstein@uw.edu})}
+\date{Due: Friday, November 2, 2012}
+
+\begin{document}
+
+\maketitle
+
+{\color{dbluecolor}There are \ref{last} problems. Turn your solutions
+  in Friday, November 2, 2012 in class.  You may work with other
+  people and can find the \LaTeX{} of this file at
+  \url{http://wstein.org/edu/2012/ant/hw/}.  If you use Sage to solve
+  a problem, include your code in your solution. I have office hours
+  12:30--2:00 on Wednesdays in Padelford C423.  }
+
+\begin{enumerate}
+
+\item Let $I,J$ be nonzero ideals in a Dedekind domain $R$.  Prove that
+if $I\cap{} J = IJ$, then $I$ and $J$ are coprime (i.e., $I+J=1$).
+
+\item\label{last}
+
+\end{enumerate}
+
+\end{document}
