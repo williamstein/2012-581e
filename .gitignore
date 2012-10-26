@@ -1,2 +1,7 @@
 private/
 *~
+*.aux
+*.log
+*.pdf
+*.synctex.gz
+*.out

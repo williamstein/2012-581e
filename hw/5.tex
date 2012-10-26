@@ -47,8 +47,41 @@ sensitive=true}
 \item Let $I,J$ be nonzero ideals in a Dedekind domain $R$.  Prove that
 if $I\cap{} J = IJ$, then $I$ and $J$ are coprime (i.e., $I+J=1$).
 
-\item\label{last}
+\item Let $I,J,K$ be nonzero ideals in a commutative ring $R$.
+Prove that $(I+J)K = IK + JK$.
+
+\item Find in any way you want an element $\alpha\in \QQ(\sqrt[3]{7})$ such that 
+$$\alpha \equiv 0\pmod{(2, a + 1)},\qquad
+\alpha \equiv 1 \pmod{(2, a^{2} + a + 1)}, \qquad
+\alpha \equiv \sqrt[3]{2} \pmod{(3, a - 1)}.$$
+
+\item\label{last} Consider the ideal $I=(2(\sqrt[3]{7}+1), \sqrt[3]{7}^2 +
+  2\sqrt[3]{7}+1)$ in the ring of integers of $K=\QQ(\sqrt[3]{7})$.
+  Find an element $\alpha \in \QQ(\sqrt[3]{7})$ such that 
+  $I=(32\sqrt[3]{7}, \alpha)$.
 
 \end{enumerate}
 
 \end{document}
+
+for d in [2..20]:
+     try:
+        print d,
+        K.<a> = NumberField(x^3-d)
+        h = K.class_number()
+        if h > 1: 
+            print h
+            break
+     except: pass
+
+I = K.class_group().gens()[0].ideal()
+I2 = I^2
+I3 = I^3
+I, I2, I3
+[x for x in dir(K) if x.startswith('pr')]
+[latex(b) for b in K.primes_above(2) + K.primes_above(3)]
+I = K.ideal([2*(a+1), (a^2 + 2*a+1)])
+J = K.ideal([32*a, a-7])
+32*a in I
+
+K.maximal_order().basis()
