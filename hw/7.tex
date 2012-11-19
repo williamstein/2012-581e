@@ -1,0 +1,96 @@
+\documentclass{article}
+%\voffset=-.12\textheight
+%\textheight=1.24\textheight
+\include{macros}
+\usepackage{url}
+\usepackage{color}
+\definecolor{dblackcolor}{rgb}{0.0,0.0,0.0}
+\definecolor{dbluecolor}{rgb}{.01,.02,0.7}
+\definecolor{dredcolor}{rgb}{0.6,0,0}
+\definecolor{dgraycolor}{rgb}{0.30,0.3,0.30}
+\definecolor{dgreen}{rgb}{0,0.3,0}
+\usepackage{listings} 
+\usepackage{hyperref} 
+\lstdefinelanguage{Sage}[]{Python}
+{morekeywords={True,False,sage,singular},
+sensitive=true}
+\lstset{frame=none,
+          showtabs=False,
+          showspaces=False,
+          showstringspaces=False,
+          commentstyle={\ttfamily\color{dredcolor}},
+          keywordstyle={\ttfamily\color{dbluecolor}\bfseries},
+          stringstyle ={\ttfamily\color{dgraycolor}\bfseries},
+          language = Sage,
+	  basicstyle={\scriptsize \ttfamily},
+	  aboveskip=.3em,
+	  belowskip=.1em
+          }
+
+\title{\dred{Math 581e, Fall 2012, Homework 7}}
+\author{William Stein ({\tt wstein@uw.edu})}
+\date{Due: Friday, November 16, 2012}
+
+\begin{document}
+
+\maketitle
+
+{\color{dbluecolor}There are \ref{last} problems. Turn your solutions
+  in Friday, November 16, 2012 in class.  You may work with other
+  people and can find the \LaTeX{} of this file at
+  \url{http://wstein.org/edu/2012/ant/hw/}.  If you use Sage to solve
+  a problem, include your code in your solution. I have office hours
+  12:30--2:00 on Wednesdays in Padelford C423.  }
+
+For any Dedekind domain $R$ at all, define the {\em class group} $\Cl(R)$ to be
+the group of fractional ideals modulo the subgroup of principal
+fractional ideals.  This definition makes sense for an arbitrary
+Dedekind domain.
+
+{\bf\color{dredcolor} Warning:} I just made up all of these problems
+from scratch, so if something seems wrong or impossible, ask me!
+
+\begin{enumerate}
+
+\item Let $\cO_K$ be the ring of integers of a number field and let
+  $n$ be a positive integer.  
+  \begin{enumerate}
+    \item Prove that $R=\cO_K[\frac{1}{n}]$ is a Dedekind domain.  
+    \item Prove that $\Cl(R)$ is finite.
+    \item Describe (with proof) a useful relationship between $\Cl(R)$ and $\Cl(\cO_K)$.
+  \end{enumerate}
+
+\item Let $R=k[t]$, where $k$ is an algebraically closed field.  Of course,
+$R$ is a Dedekind domain.
+  \begin{enumerate}
+  \item Prove that $\Cl(R)$ is trivial (of order $1$).
+  \item Prove that the group $U_R$ of units in $R$ is not finitely generated.
+  \end{enumerate}
+
+\item  Let $k$ be a {\em finite field} of characteristic $\neq 2$, and consider
+the Dedekind domain $R=k[x,y]/(y^2-x^3-x)$.  [You can use anything you know
+from outside of class from algebra or algebraic geometry on this problem.]
+\begin{enumerate}
+\item Let $I\subset R$ be a nonzero ideal.  Prove that the norm $N(I) = \#(R/I)$
+is finite.
+\item Let $B$ be a positive integer.  Prove that there are finitely
+many nonzero ideals $I$ of $R$ such that $N(I)\leq B$.
+\item Prove that the unit group $U_R = R^*$ is a finite cyclic group.
+\item Nonetheless, prove that $\Cl(R)$ is {\em infinite}. [[In fact, this part of the problem is completely {\em wrong} -- the class group is in bijection with the group of rational points on the elliptic curve over the finite field, which is finite.]]
+\end{enumerate}
+
+\item \label{last}\begin{enumerate}
+\item Prove that if $K$ is any number field, then the torsion subgroup of the group
+$U_K=\cO_K^*$ has even order.
+\item Prove that if $K=\Q(\sqrt{D})$, with $D\leq -1$ square free, is
+  a quadratic imaginary field, then the unit group $U_K$ of $\cO_K$ has
+  order $2$, $4$, or $6$.
+\item Prove that if $K$ is a number field of odd degree, then the
+  torsion subgroup of $U_K$ has order $2$
+\item What is the torsion subgroup of the unit group of the $389$th
+  cyclotomic field $\Q(\zeta_{389})$.
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
