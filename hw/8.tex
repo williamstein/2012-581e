@@ -1,0 +1,87 @@
+\documentclass{article}
+%\voffset=-.12\textheight
+%\textheight=1.24\textheight
+\include{macros}
+\usepackage{url}
+\usepackage{color}
+\definecolor{dblackcolor}{rgb}{0.0,0.0,0.0}
+\definecolor{dbluecolor}{rgb}{.01,.02,0.7}
+\definecolor{dredcolor}{rgb}{0.6,0,0}
+\definecolor{dgraycolor}{rgb}{0.30,0.3,0.30}
+\definecolor{dgreen}{rgb}{0,0.3,0}
+\usepackage{listings} 
+\usepackage{hyperref} 
+\lstdefinelanguage{Sage}[]{Python}
+{morekeywords={True,False,sage,singular},
+sensitive=true}
+\lstset{frame=none,
+          showtabs=False,
+          showspaces=False,
+          showstringspaces=False,
+          commentstyle={\ttfamily\color{dredcolor}},
+          keywordstyle={\ttfamily\color{dbluecolor}\bfseries},
+          stringstyle ={\ttfamily\color{dgraycolor}\bfseries},
+          language = Sage,
+	  basicstyle={\scriptsize \ttfamily},
+	  aboveskip=.3em,
+	  belowskip=.1em
+          }
+
+\title{\dred{Math 581e, Fall 2012, Homework 8}}
+\author{William Stein ({\tt wstein@uw.edu})}
+\date{Due: Friday, November 30, 2012}
+
+\begin{document}
+
+\maketitle
+
+{\color{dbluecolor}  This is the last homework assignment.  There are \ref{last} problems. Turn your solutions
+  in Friday, November 30, 2012 in class.  You may work with other
+  people and can find the \LaTeX{} of this file at
+  \url{http://wstein.org/edu/2012/ant/hw/}.  If you use Sage to solve
+  a problem, include your code in your solution. I have office hours
+  12:30--2:00 on Wednesdays in Padelford C423.  }
+
+
+\begin{enumerate}
+
+\item Turn in rough draft of your project.
+
+\item Let $K$ be the cubic field obtained by adjoining a root of $f=$ to $\Q$.
+\begin{enumerate}
+\item Show that $r=3, s=0$, i.e., there are 3 real embeddings.
+\item Compute (e.g., using Sage) explicit generators for the unit group $U_K$.
+\item Draw a picture that illustrates how $U_K$ maps to a lattice in a codimension one subspace of $\R^3$.
+\item Choose a basis for the image of $U_K$, and compute the $2\times 2$ matrix $A$ corresponding to the
+dot product pairing on that basis.
+\item Compute the absolute value of the determinant of $A$, which is
+  (basically) a quantity called the {\em regulator} of the number
+  field $K$.
+\end{enumerate}
+
+\item \label{last} (This problem is inspired by Aly's talk about pseudo-basis, and is Lemma~1.2.20 of \url{http://wstein.org/5canz/craig/math/Cohen\%20--\%20Advanced\%20topics\%20in\%20computational\%20number\%20theory.pdf}) Let
+  $\mathfrak{a}$ and $\mathfrak{b}$ be nonzero ideals of a Dedekind domain $R$.  Prove that the
+  $R$-modules $\mathfrak{a}\oplus \mathfrak{b}$ and $R\oplus
+  \mathfrak{a}\mathfrak{b}$ are isomorphic, as follows:
+\begin{enumerate}
+\item Reduce to the case that $\mathfrak{a}$ and $\mathfrak{b}$ are
+  integral ideals, by using that $\mathfrak{a}\isom
+  \mathfrak{a}(\alpha)$ for nonzero $\alpha$.
+\item Use the lemma we proved ``there is $\alpha$ such that $\alpha
+  I^{-1}\subset R$ is coprime to $J$'' to reduce to the case when
+  $\mathfrak{a}$ and $\mathfrak{b}$ are coprime.
+\item Define a map $f:\mathfrak{a}\oplus \mathfrak{b} \to R$ by
+  $f(a,b) = a-b$. Show that $f$ is an $R$-module homomorphism, then use
+  that $\mathfrak{a}$ and $\mathfrak{b}$ are coprime to deduce that we
+  have an exact sequence
+$$
+  0 \to \mathfrak{a}\cap \mathfrak{b} \to \mathfrak{a}\oplus \mathfrak{b} \to R \to 0.
+$$
+\item Understand this: Since $R$ is a free module, it is projective,
+  which implies that the above exact sequence splits, which proves the
+  statement.
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
